@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import Counter from './components/Counter';
+import UsersList from './components/UsersList';
 import { store } from './redux/store';
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
     <Provider store={store}>
       <StatusBar style="auto" />
       <Counter />
+      <UsersList />
     </Provider>
   );
 }
