@@ -9,9 +9,9 @@ export default function Counter() {
   console.log("counterValue",counterValue)
 
   return (
-    <View>
-        {/* <Text>Counter: {counterValue}</Text> */}
-        <Button title='Increment' onPress={() => dispatch(increment({value: 2}))} />
+    <View style={{marginTop: 200}}>
+        <Text>Counter: {counterValue.value}</Text>
+        <Button title='Increment' onPress={() => dispatch(increment())} />
     </View>
   );
 }
