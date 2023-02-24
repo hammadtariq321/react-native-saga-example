@@ -13,7 +13,11 @@ const UsersList = () => {
     
   return (
     <View>
-      <Text>UsersList</Text>
+        {data.map((user) => {
+            return (
+                <Text>{user.name}</Text>
+            )
+        })}
     </View>
   )
 }

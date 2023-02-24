@@ -10,7 +10,8 @@ export const usersSlice = createSlice({
     getUsers: (state) => {
       state.isLoading = true
     },
-    getUsersSuccess: (state) => {
+    getUsersSuccess: (state, action) => {
+        state.data = action.payload
         state.isLoading = false
     }
   },
