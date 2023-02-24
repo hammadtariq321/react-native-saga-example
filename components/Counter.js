@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from '../redux/slices/counterSlice';
+import { increment, decrement } from '../redux/slices/counterSlice';
 
 export default function Counter() {
   const dispatch = useDispatch();
@@ -12,6 +12,7 @@ export default function Counter() {
     <View style={{marginTop: 200}}>
         <Text>Counter: {counterValue.value}</Text>
         <Button title='Increment' onPress={() => dispatch(increment())} />
+        <Button title='decrement' onPress={() => dispatch(decrement())} />
     </View>
   );
 }
