@@ -6,7 +6,7 @@ import { fetchUserData } from "../redux/slices/usersSlice";
 
 export default function Counter() {
   const dispatch = useDispatch();
-  const counterValue = useSelector((state) => state.counter);
+  const counterValue = useSelector((state) => state.counter.data);
   const userData = useSelector((state) => state.users.users);
   console.log("counterValue", counterValue);
 
@@ -17,7 +17,7 @@ export default function Counter() {
   return (
     <View style={{ marginTop: 100 }}>
       <Button title="Increment" onPress={() => dispatch(increment(2))} />
-      <Text>Counter: {counterValue.data}</Text>
+      <Text>Counter: {counterValue}</Text>
       <Button title="Decrement" onPress={() => dispatch(decrement(2))} />
 
       <View>
