@@ -16,7 +16,7 @@ export const usersSlice = createSlice({
         },
         fetchUserDataFailure : (state) => {
             state.loading = false;
-        }
+        },
     }
 })
 
